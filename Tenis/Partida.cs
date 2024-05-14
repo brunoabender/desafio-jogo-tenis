@@ -22,12 +22,12 @@
         {
             jogador.Pontos++;
 
-            if (jogador.Pontos == Constantes.UltimoPonto)
+            if (jogador.Pontos == Configuracoes.UltimoPonto)
             {
-                jogador.Pontos =  Constantes.PrimeiroPonto;
+                jogador.Pontos = Configuracoes.PrimeiroPonto;
                 jogador.Games++;
 
-                if (jogador.Games == Constantes.UltimoGame)
+                if (jogador.Games == Configuracoes.UltimoGame)
                     AdicionarSet(jogador);
 
                 ProximoSaque = (ProximoSaque == PrimeiroPlayer) ? SegundoPlayer : PrimeiroPlayer;
@@ -42,7 +42,7 @@
             var set = jogador.Sets + 1;
             jogador.Sets++;
 
-            if (set == Constantes.UltimoSet)
+            if (set == Configuracoes.UltimoSet)
             {
                 Imprimir();
                 Console.WriteLine($"{jogador.Nome} venceu a partida!");
