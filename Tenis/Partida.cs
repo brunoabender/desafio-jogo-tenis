@@ -1,11 +1,11 @@
 ﻿namespace Tenis
 {
-    internal class Partida(Jogador primeiroJogador, Jogador segundoJogador)
+    public class Partida(Jogador primeiroJogador, Jogador segundoJogador)
     {
         public Jogador PrimeiroJogador { get; set; } = primeiroJogador;
         public Jogador SegundoJogador { get; set; } = segundoJogador;
         public Jogador ProximoSaque { get; set; } = Random.Shared.Next(0, 2) == 0 ? primeiroJogador : segundoJogador;
-        public ModoJogo modoJogo { get; set; } = ModoJogo.Normal;
+        public Modo Modo { get; set; } = Modo.Normal;
 
         public void Pontuar(Jogador jogador)
         {

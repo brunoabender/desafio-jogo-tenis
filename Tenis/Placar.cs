@@ -1,6 +1,6 @@
 ﻿namespace Tenis
 {
-    internal class Placar(Partida partida) 
+    public class Placar(Partida partida) 
     {
         private readonly int[] Pontuacao = [0, 15, 30, 40];
 

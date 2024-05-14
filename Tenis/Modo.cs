@@ -1,6 +1,6 @@
 ﻿namespace Tenis
 {
-    internal enum ModoJogo
+    public enum Modo
     {
         Normal,
         TieBreak,

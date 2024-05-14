@@ -1,6 +1,6 @@
 ﻿namespace Tenis
 {
-    internal class Configuracoes
+    public class Configuracoes
     {
         public const int PrimeiroPonto = 0;
         public const int UltimoPonto = 4;
