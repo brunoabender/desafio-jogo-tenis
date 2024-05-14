@@ -1,34 +1,38 @@
 ﻿namespace Tenis
 {
-    public class Partida
+    public class Partida(Jogador primeiroJogador, Jogador segundoJogador)
     {
-        public Jogador PrimeiroJogador { get; private set; }
-        public Jogador SegundoJogador { get; private set; }
-        public Jogador ProximoSaque { get; private set; }
+        public Jogador PrimeiroJogador { get; private set; } = primeiroJogador;
+        public Jogador SegundoJogador { get; private set; } = segundoJogador;
+        public Jogador ProximoSaque { get; private set; } = new Random().Next(0, 2) == 0 ? primeiroJogador : segundoJogador;
         public Modo Modo { get; set; } = Modo.Normal;
-
-        public Partida(Jogador primeiroJogador, Jogador segundoJogador)
-        {
-            PrimeiroJogador = primeiroJogador;
-            SegundoJogador = segundoJogador;
-            ProximoSaque = new Random().Next(0, 2) == 0 ? primeiroJogador : segundoJogador;
-        }
 
         public void Pontuar(Jogador jogador)
         {
-            jogador.Pontuacao.AdicionarPonto();
+            jogador.Pontuacao.Adicionar();
+
+            Modo = VerificarModo();
+
             if (jogador.Pontuacao.Pontos == Configuracoes.UltimoPontoGame)
-            {
                 PontuarGame(jogador);
-            }
         }
 
         private void PontuarGame(Jogador jogador)
         {
             jogador.Game.Adicionar();
+
+            if (PrimeiroJogador.Game.Games == Configuracoes.UltimoGameDoSet - 1 && SegundoJogador.Game.Games == Configuracoes.UltimoGameDoSet - 1)
+            {
+                if (Math.Abs(PrimeiroJogador.Game.Games - SegundoJogador.Game.Games) == 2)
+                    PontuarSet(jogador);
+
+                LimparPontuacao();
+                return;
+            }
+
             if (jogador.Game.Games == Configuracoes.UltimoGameDoSet)
                 PontuarSet(jogador);
-            
+
             LimparPontuacao();
             SelecionarProximoSaque();
         }
@@ -60,12 +64,24 @@
             SegundoJogador.Game.Resetar();
         }
 
-        private void SelecionarProximoSaque() => ProximoSaque = (ProximoSaque == PrimeiroJogador) ? SegundoJogador : PrimeiroJogador;
-
         public void NovoJogo()
         {
             PrimeiroJogador = new Jogador("Primeiro Jogador");
             SegundoJogador = new Jogador("Segundo Jogador");
+        }
+        private void SelecionarProximoSaque() => ProximoSaque = (ProximoSaque == PrimeiroJogador) ? SegundoJogador : PrimeiroJogador;
+
+        private Modo VerificarModo()
+        {
+            if (!Regras.EstaEmDeuce(PrimeiroJogador, segundoJogador) || Regras.EstaEmTimeBreak(PrimeiroJogador, SegundoJogador))
+            {
+                if (Regras.EstaEmTimeBreak(PrimeiroJogador, SegundoJogador) && !Regras.EstaEmDeuce(PrimeiroJogador, segundoJogador))
+                    return Modo.TieBreak;
+                else
+                    return Modo.Normal;
+            }
+            else
+                return Modo.Deuce;
         }
     }
 }

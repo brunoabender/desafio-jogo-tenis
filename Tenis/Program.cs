@@ -15,7 +15,6 @@
             while (true)
             {
                 placar.Imprimir();
-
                 var escolha = Console.ReadLine();
                 if(string.IsNullOrEmpty(escolha)) 
                     Console.WriteLine("Escolha uma opção!"); 
