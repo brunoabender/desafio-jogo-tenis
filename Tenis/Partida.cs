@@ -2,20 +2,18 @@
 {
     internal class Partida(Jogador primeiroJogador, Jogador segundoJogador)
     {
-        public Jogador PrimeiroPlayer { get; set; } = primeiroJogador;
-        public Jogador SegundoPlayer { get; set; } = segundoJogador;
-
-        private Jogador ProximoSaque = Random.Shared.Next(0, 1) == 0 ? primeiroJogador : segundoJogador;
-
-        private readonly Placar placar = new(primeiroJogador, segundoJogador);
+        public Jogador PrimeiroJogador { get; set; } = primeiroJogador;
+        public Jogador SegundoJogador { get; set; } = segundoJogador;
+        public Jogador ProximoSaque { get; set; } = Random.Shared.Next(0, 2) == 0 ? primeiroJogador : segundoJogador;
+        public ModoJogo modoJogo { get; set; } = ModoJogo.Normal;
 
         public void Pontuar(Jogador jogador)
         {
             jogador.Pontos++;
 
-            if (RegraVantagem.Ativo(PrimeiroPlayer.Pontos, SegundoPlayer.Pontos))
+            if (RegraVantagem.Ativo(PrimeiroJogador.Pontos, SegundoJogador.Pontos))
             {
-                if (RegraVantagem.Resolvido(PrimeiroPlayer.Pontos, PrimeiroPlayer.Pontos))
+                if (RegraVantagem.Resolvido(PrimeiroJogador.Pontos, PrimeiroJogador.Pontos))
                     AdicionarGame(jogador);
                 else
                     jogador.Pontos++;
@@ -34,35 +32,42 @@
             else
                 jogador.Games++;
 
-            PrimeiroPlayer.Pontos = 0;
-            SegundoPlayer.Pontos = 0;
-
-            ProximoSaque = (ProximoSaque == PrimeiroPlayer) ? SegundoPlayer : PrimeiroPlayer;
+            LimparPontos();
+            ProximoSaque = (ProximoSaque == PrimeiroJogador) ? SegundoJogador : PrimeiroJogador;
         }
 
         private void PontuarSet(Jogador jogador)
         {
-            var set = jogador.Sets + 1;
             jogador.Sets++;
 
-            if (set == Configuracoes.UltimoSet)
+            if (jogador.Sets == Configuracoes.UltimoSet)
             {
                 Console.WriteLine($"{jogador.Nome} venceu a partida!");
                 Environment.Exit(0);
             }
             else
             {
-                PrimeiroPlayer.Pontos = 0;
-                PrimeiroPlayer.Games = 0;
-                SegundoPlayer.Pontos = 0;
-                SegundoPlayer.Games = 0;
+                LimparPontos();
+                LimparGame();
             }
         }
 
         public void NovoJogo()
         {
-            this.PrimeiroPlayer = new Jogador { Nome = "Primeiro Jogador" };
-            this.SegundoPlayer = new Jogador { Nome = "Segundo Jogador" };
+            PrimeiroJogador = new Jogador { Nome = "Primeiro Jogador" };
+            SegundoJogador = new Jogador { Nome = "Segundo Jogador" };
+        }
+
+        private void LimparPontos()
+        {
+            PrimeiroJogador.Pontos = 0;
+            SegundoJogador.Pontos = 0;
+        }
+
+        private void LimparGame()
+        {
+            PrimeiroJogador.Games = 0;
+            SegundoJogador.Games = 0;
         }
     }
 }
