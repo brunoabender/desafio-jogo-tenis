@@ -17,10 +17,6 @@
                     partida.Pontuar(partida.PrimeiroPlayer);
                 else if (resultado == "2")
                     partida.Pontuar(partida.SegundoPlayer);
-                else if (resultado == "3")
-                    partida.AdicionarSet(partida.PrimeiroPlayer);
-                else if (resultado == "4")
-                    partida.AdicionarSet(partida.SegundoPlayer);
             }
         }
     }
