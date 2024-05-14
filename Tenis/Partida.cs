@@ -1,12 +1,12 @@
 ﻿namespace Tenis
 {
-    internal class Partida(Jogador primeiroPlayer, Jogador segundoPlayer)
+    internal class Partida(Jogador primeiroJogador, Jogador segundoJogador)
     {
-        public Jogador PrimeiroPlayer { get; init; } = primeiroPlayer;
-        public Jogador SegundoPlayer { get; init; } = segundoPlayer;
+        public Jogador PrimeiroPlayer { get; init; } = primeiroJogador;
+        public Jogador SegundoPlayer { get; init; } = segundoJogador;
 
         //Lógica para definir quem saca primeiro de forma "randomica"
-        private Jogador ProximoSaque = Random.Shared.Next(0, 1) == 0 ? primeiroPlayer : segundoPlayer;
+        private Jogador ProximoSaque = Random.Shared.Next(0, 1) == 0 ? primeiroJogador : segundoJogador;
 
         private readonly int[] Pontuacao = [0, 15, 30, 40];
 
@@ -23,21 +23,26 @@
             jogador.Pontos++;
 
             if (jogador.Pontos == Configuracoes.UltimoPonto)
-            {
-                jogador.Pontos = Configuracoes.PrimeiroPonto;
-                jogador.Games++;
-
-                if (jogador.Games == Configuracoes.UltimoGame)
-                    AdicionarSet(jogador);
-
-                ProximoSaque = (ProximoSaque == PrimeiroPlayer) ? SegundoPlayer : PrimeiroPlayer;
-
-                PrimeiroPlayer.Pontos = 0;
-                SegundoPlayer.Pontos = 0;
-            }
+                AdicionarGame(jogador);
         }
 
-        private void AdicionarSet(Jogador jogador)
+        private void AdicionarGame(Jogador jogador)
+        {
+            if (jogador.Games == Configuracoes.UltimoGame)
+                PontuarSet(jogador);
+
+            jogador.Games++;
+
+            if(PrimeiroPlayer.Pontos == 40 && SegundoPlayer.Pontos == 40)
+                ProximoSaque = (ProximoSaque == PrimeiroPlayer) ? SegundoPlayer : PrimeiroPlayer;
+
+            PrimeiroPlayer.Pontos = 0;
+            SegundoPlayer.Pontos = 0;
+
+            ProximoSaque = (ProximoSaque == PrimeiroPlayer) ? SegundoPlayer : PrimeiroPlayer;
+        }
+
+        private void PontuarSet(Jogador jogador)
         {
             var set = jogador.Sets + 1;
             jogador.Sets++;
