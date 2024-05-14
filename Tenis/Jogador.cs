@@ -1,39 +1,16 @@
-﻿using System.Collections.Generic;
-
-public class Jogador
+﻿namespace Tenis
 {
-    public string Nome { get; set; }
-    public Pontuacao Pontuacao { get; set; } = new Pontuacao();
-    public Game Game { get; set; } = new Game();
-    public Set Set { get; set; } = new Set();
-}
-
-public class Game
-{
-    public int Games { get; private set; }
-
-    public void AdicionarGame()
+    public record Jogador(string Nome)
     {
-        Games++;
-    }
+        public Jogador(string nome, Pontuacao pontuacao, Game game, Set set) : this(nome)
+        {
+            Pontuacao = pontuacao;
+            Game = game;
+            Set = set;
+        }
 
-    public void Resetar()
-    {
-        Games = 0;
-    }
-}
-
-public class Pontuacao
-{
-    public int Pontos { get; private set; }
-
-    public void AdicionarPonto()
-    {
-        Pontos++;
-    }
-
-    public void Resetar()
-    {
-        Pontos = 0;
+        public Pontuacao Pontuacao { get; set; } = new Pontuacao();
+        public Game Game { get; set; } = new Game();
+        public Set Set { get; set; } = new Set();
     }
 }

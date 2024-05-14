@@ -67,8 +67,8 @@
 
         public void NovoJogo()
         {
-            PrimeiroJogador = new Jogador { Nome = "Primeiro Jogador" };
-            SegundoJogador = new Jogador { Nome = "Segundo Jogador" };
+            PrimeiroJogador = new Jogador("Primeiro Jogador");
+            SegundoJogador = new Jogador("Segundo Jogador");
         }
     }
 }

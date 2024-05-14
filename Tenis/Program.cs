@@ -4,8 +4,8 @@
     {
         static void Main()
         {
-            var primeiroJogador = new Jogador { Nome = "Primeiro Jogador" };
-            var segundoJogador = new Jogador { Nome = "Segundo Jogador" };
+            var primeiroJogador = new Jogador("Primeiro Jogador");
+            var segundoJogador = new Jogador("Segundo Jogador");
 
             var partida = new Partida(primeiroJogador, segundoJogador);
             

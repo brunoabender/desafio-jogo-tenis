@@ -1,8 +1,11 @@
-﻿public class Set
+﻿namespace Tenis
 {
-    public int Sets { get; private set; }
-    public void AdicionarSet()
+    public class Set
     {
-        Sets++;
+        public int Sets { get; private set; } = 0;
+        public void AdicionarSet()
+        {
+            Sets++;
+        }
     }
 }
