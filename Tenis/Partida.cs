@@ -4,42 +4,30 @@
     {
         public Jogador PrimeiroJogador { get; set; } = primeiroJogador;
         public Jogador SegundoJogador { get; set; } = segundoJogador;
-        public Jogador ProximoSaque { get; set; } = Random.Shared.Next(0, 2) == 0 ? primeiroJogador : segundoJogador;
+        public Jogador ProximoSaque { get; set; } = new Random().Next(0, 2) == 0 ? primeiroJogador : segundoJogador;
+
         public Modo Modo { get; set; } = Modo.Normal;
 
         public void Pontuar(Jogador jogador)
         {
             jogador.Pontos++;
-
-            if (RegraVantagem.Ativo(PrimeiroJogador.Pontos, SegundoJogador.Pontos))
-            {
-                if (RegraVantagem.Resolvido(PrimeiroJogador.Pontos, PrimeiroJogador.Pontos))
-                    AdicionarGame(jogador);
-                else
-                    jogador.Pontos++;
-
-                return;
-            }
-
             if (jogador.Pontos == Configuracoes.UltimoPonto)
                 AdicionarGame(jogador);
         }
 
-        private void AdicionarGame(Jogador jogador)
+        public void AdicionarGame(Jogador jogador)
         {
+            jogador.Games++;
             if (jogador.Games == Configuracoes.UltimoGame)
                 PontuarSet(jogador);
-            else
-                jogador.Games++;
 
             LimparPontos();
-            ProximoSaque = (ProximoSaque == PrimeiroJogador) ? SegundoJogador : PrimeiroJogador;
+            SelecionarProximoSaque();
         }
 
-        private void PontuarSet(Jogador jogador)
+        public void PontuarSet(Jogador jogador)
         {
             jogador.Sets++;
-
             if (jogador.Sets == Configuracoes.UltimoSet)
             {
                 Console.WriteLine($"{jogador.Nome} venceu a partida!");
@@ -69,5 +57,7 @@
             PrimeiroJogador.Games = 0;
             SegundoJogador.Games = 0;
         }
+
+        private void SelecionarProximoSaque() => ProximoSaque = (ProximoSaque == PrimeiroJogador) ? SegundoJogador : PrimeiroJogador;
     }
 }

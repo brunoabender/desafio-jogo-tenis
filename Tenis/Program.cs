@@ -8,19 +8,19 @@
             var segundoJogador = new Jogador { Nome = "Segundo Jogador" };
 
             var partida = new Partida(primeiroJogador, segundoJogador);
+            
             var placar = new Placar(partida);
+            var controlador = new Controlador(partida);
 
             while (true)
             {
                 placar.Imprimir();
-                var resultado = Console.ReadLine();
 
-                if (resultado == "1")
-                    partida.Pontuar(partida.PrimeiroJogador);
-                else if (resultado == "2")
-                    partida.Pontuar(partida.SegundoJogador);
-                else if(resultado == "n")
-                    partida.NovoJogo();
+                var escolha = Console.ReadLine();
+                if(string.IsNullOrEmpty(escolha)) 
+                    Console.WriteLine("Escolha uma opção!"); 
+                else
+                    controlador.Acao(escolha);
             }
         }
     }
