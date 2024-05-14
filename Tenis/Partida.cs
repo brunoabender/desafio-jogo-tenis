@@ -2,25 +2,26 @@
 {
     internal class Partida(Jogador primeiroJogador, Jogador segundoJogador)
     {
-        public Jogador PrimeiroPlayer { get; init; } = primeiroJogador;
-        public Jogador SegundoPlayer { get; init; } = segundoJogador;
+        public Jogador PrimeiroPlayer { get; set; } = primeiroJogador;
+        public Jogador SegundoPlayer { get; set; } = segundoJogador;
 
-        //Lógica para definir quem saca primeiro de forma "randomica"
         private Jogador ProximoSaque = Random.Shared.Next(0, 1) == 0 ? primeiroJogador : segundoJogador;
 
-        private readonly int[] Pontuacao = [0, 15, 30, 40];
-
-        public void Imprimir()
-        {
-            Console.WriteLine("Placar de Tênis:");
-            Console.WriteLine($"Jogador 1: {PrimeiroPlayer.Sets} sets, {PrimeiroPlayer.Games} games, { Pontuacao[PrimeiroPlayer.Pontos] } pontos no game atual");
-            Console.WriteLine($"Jogador 2: {SegundoPlayer.Sets} sets, {SegundoPlayer.Games} games,  {Pontuacao[SegundoPlayer.Pontos] } pontos no game atual");
-            Console.WriteLine($"Próximo saque: {ProximoSaque.Nome}");
-        }
+        private readonly Placar placar = new(primeiroJogador, segundoJogador);
 
         public void Pontuar(Jogador jogador)
         {
             jogador.Pontos++;
+
+            if (RegraVantagem.Ativo(PrimeiroPlayer.Pontos, SegundoPlayer.Pontos))
+            {
+                if (RegraVantagem.Resolvido(PrimeiroPlayer.Pontos, PrimeiroPlayer.Pontos))
+                    AdicionarGame(jogador);
+                else
+                    jogador.Pontos++;
+
+                return;
+            }
 
             if (jogador.Pontos == Configuracoes.UltimoPonto)
                 AdicionarGame(jogador);
@@ -30,11 +31,8 @@
         {
             if (jogador.Games == Configuracoes.UltimoGame)
                 PontuarSet(jogador);
-
-            jogador.Games++;
-
-            if(PrimeiroPlayer.Pontos == 40 && SegundoPlayer.Pontos == 40)
-                ProximoSaque = (ProximoSaque == PrimeiroPlayer) ? SegundoPlayer : PrimeiroPlayer;
+            else
+                jogador.Games++;
 
             PrimeiroPlayer.Pontos = 0;
             SegundoPlayer.Pontos = 0;
@@ -49,17 +47,22 @@
 
             if (set == Configuracoes.UltimoSet)
             {
-                Imprimir();
                 Console.WriteLine($"{jogador.Nome} venceu a partida!");
                 Environment.Exit(0);
             }
             else
             {
                 PrimeiroPlayer.Pontos = 0;
-                SegundoPlayer.Pontos = 0;
                 PrimeiroPlayer.Games = 0;
+                SegundoPlayer.Pontos = 0;
                 SegundoPlayer.Games = 0;
             }
+        }
+
+        public void NovoJogo()
+        {
+            this.PrimeiroPlayer = new Jogador { Nome = "Primeiro Jogador" };
+            this.SegundoPlayer = new Jogador { Nome = "Segundo Jogador" };
         }
     }
 }
