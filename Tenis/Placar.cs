@@ -10,6 +10,10 @@
             Console.WriteLine($"Jogador 1: {partida.PrimeiroJogador.Set.Sets} sets, {partida.PrimeiroJogador.Game.Games} games, {Pontuacao[partida.PrimeiroJogador.Pontuacao.Pontos]} pontos no game atual");
             Console.WriteLine($"Jogador 2: {partida.SegundoJogador.Set.Sets} sets, {partida.SegundoJogador.Game.Games} games,  {Pontuacao[partida.SegundoJogador.Pontuacao.Pontos]} pontos no game atual");
             Console.WriteLine($"Próximo saque: {partida.ProximoSaque.Nome}");
+
+            Console.WriteLine($"Opções:");
+            Console.WriteLine($"Pontuar Jogador 1: 1");
+            Console.WriteLine($"Pontuar Jogador 2: 2");
         }
     }
 }

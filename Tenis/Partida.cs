@@ -25,7 +25,7 @@
 
         private void PontuarGame(Jogador jogador)
         {
-            jogador.Game.AdicionarGame();
+            jogador.Game.Adicionar();
             if (jogador.Game.Games == Configuracoes.UltimoGameDoSet)
                 PontuarSet(jogador);
             
@@ -35,11 +35,11 @@
 
         private void PontuarSet(Jogador jogador)
         {
-            jogador.Set.AdicionarSet();
+            jogador.Set.Adicionar();
             if (jogador.Set.Sets == Configuracoes.UltimoSet)
             {
                 Console.WriteLine($"{jogador.Nome} venceu a partida!");
-                Environment.Exit(0); // Pode ser substituído por um evento ou outra sinalização
+                Environment.Exit(0);
             }
             else
             {
@@ -60,10 +60,7 @@
             SegundoJogador.Game.Resetar();
         }
 
-        private void SelecionarProximoSaque()
-        {
-            ProximoSaque = (ProximoSaque == PrimeiroJogador) ? SegundoJogador : PrimeiroJogador;
-        }
+        private void SelecionarProximoSaque() => ProximoSaque = (ProximoSaque == PrimeiroJogador) ? SegundoJogador : PrimeiroJogador;
 
         public void NovoJogo()
         {
