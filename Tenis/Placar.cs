@@ -7,8 +7,8 @@
         public void Imprimir()
         {
             Console.WriteLine("Placar de Tênis:");
-            Console.WriteLine($"Jogador 1: {partida.PrimeiroJogador.Sets} sets, {partida.PrimeiroJogador.Games} games, {Pontuacao[partida.PrimeiroJogador.Pontos]} pontos no game atual");
-            Console.WriteLine($"Jogador 2: {partida.SegundoJogador.Sets} sets, {partida.SegundoJogador.Games} games,  {Pontuacao[partida.SegundoJogador.Pontos]} pontos no game atual");
+            Console.WriteLine($"Jogador 1: {partida.PrimeiroJogador.Set} sets, {partida.PrimeiroJogador.Game} games, {Pontuacao[partida.PrimeiroJogador.Pontuacao.Pontos]} pontos no game atual");
+            Console.WriteLine($"Jogador 2: {partida.SegundoJogador.Set} sets, {partida.SegundoJogador.Game} games,  {Pontuacao[partida.SegundoJogador.Pontuacao.Pontos]} pontos no game atual");
             Console.WriteLine($"Próximo saque: {partida.ProximoSaque.Nome}");
         }
     }

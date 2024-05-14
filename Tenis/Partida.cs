@@ -1,43 +1,68 @@
 ﻿namespace Tenis
 {
-    public class Partida(Jogador primeiroJogador, Jogador segundoJogador)
+    public class Partida
     {
-        public Jogador PrimeiroJogador { get; set; } = primeiroJogador;
-        public Jogador SegundoJogador { get; set; } = segundoJogador;
-        public Jogador ProximoSaque { get; set; } = new Random().Next(0, 2) == 0 ? primeiroJogador : segundoJogador;
-
+        public Jogador PrimeiroJogador { get; private set; }
+        public Jogador SegundoJogador { get; private set; }
+        public Jogador ProximoSaque { get; private set; }
         public Modo Modo { get; set; } = Modo.Normal;
+
+        public Partida(Jogador primeiroJogador, Jogador segundoJogador)
+        {
+            PrimeiroJogador = primeiroJogador;
+            SegundoJogador = segundoJogador;
+            ProximoSaque = new Random().Next(0, 2) == 0 ? primeiroJogador : segundoJogador;
+        }
 
         public void Pontuar(Jogador jogador)
         {
-            jogador.Pontos++;
-            if (jogador.Pontos == Configuracoes.UltimoPonto)
-                AdicionarGame(jogador);
+            jogador.Pontuacao.AdicionarPonto();
+            if (jogador.Pontuacao.Pontos == Configuracoes.UltimoPontoGame)
+            {
+                PontuarGame(jogador);
+            }
         }
 
-        public void AdicionarGame(Jogador jogador)
+        private void PontuarGame(Jogador jogador)
         {
-            jogador.Games++;
-            if (jogador.Games == Configuracoes.UltimoGame)
+            jogador.Game.AdicionarGame();
+            if (jogador.Game.Games == Configuracoes.UltimoGameDoSet)
                 PontuarSet(jogador);
-
-            LimparPontos();
+            
+            LimparPontuacao();
             SelecionarProximoSaque();
         }
 
-        public void PontuarSet(Jogador jogador)
+        private void PontuarSet(Jogador jogador)
         {
-            jogador.Sets++;
-            if (jogador.Sets == Configuracoes.UltimoSet)
+            jogador.Set.AdicionarSet();
+            if (jogador.Set.Sets == Configuracoes.UltimoSet)
             {
                 Console.WriteLine($"{jogador.Nome} venceu a partida!");
-                Environment.Exit(0);
+                Environment.Exit(0); // Pode ser substituído por um evento ou outra sinalização
             }
             else
             {
-                LimparPontos();
-                LimparGame();
+                LimparPontuacao();
+                LimparGames();
             }
+        }
+
+        private void LimparPontuacao()
+        {
+            PrimeiroJogador.Pontuacao.Resetar();
+            SegundoJogador.Pontuacao.Resetar();
+        }
+
+        private void LimparGames()
+        {
+            PrimeiroJogador.Game.Resetar();
+            SegundoJogador.Game.Resetar();
+        }
+
+        private void SelecionarProximoSaque()
+        {
+            ProximoSaque = (ProximoSaque == PrimeiroJogador) ? SegundoJogador : PrimeiroJogador;
         }
 
         public void NovoJogo()
@@ -45,19 +70,5 @@
             PrimeiroJogador = new Jogador { Nome = "Primeiro Jogador" };
             SegundoJogador = new Jogador { Nome = "Segundo Jogador" };
         }
-
-        private void LimparPontos()
-        {
-            PrimeiroJogador.Pontos = 0;
-            SegundoJogador.Pontos = 0;
-        }
-
-        private void LimparGame()
-        {
-            PrimeiroJogador.Games = 0;
-            SegundoJogador.Games = 0;
-        }
-
-        private void SelecionarProximoSaque() => ProximoSaque = (ProximoSaque == PrimeiroJogador) ? SegundoJogador : PrimeiroJogador;
     }
 }
