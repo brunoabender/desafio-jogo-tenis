@@ -1,4 +1,4 @@
-﻿namespace Tenis
+﻿namespace Tenis.Configuracao
 {
     public class Configuracoes
     {

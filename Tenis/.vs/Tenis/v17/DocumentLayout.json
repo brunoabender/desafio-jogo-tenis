@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\partida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:partida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\entidade\\partida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:entidade\\partida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\regras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:regras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\controlador\\controlador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:controlador\\controlador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\placar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:placar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\configuracoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:configuracoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\entidade\\placar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:entidade\\placar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,11 +28,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Partida.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Partida.cs",
-              "RelativeDocumentMoniker": "Partida.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Partida.cs",
-              "RelativeToolTip": "Partida.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAAwFAAAAAQAAAA",
+              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Partida.cs",
+              "RelativeDocumentMoniker": "Entidade\\Partida.cs",
+              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Partida.cs",
+              "RelativeToolTip": "Entidade\\Partida.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAA0wFEAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-13T22:25:02.441Z",
               "IsPinned": true,
@@ -54,27 +42,14 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Placar.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Placar.cs",
-              "RelativeDocumentMoniker": "Placar.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Placar.cs",
-              "RelativeToolTip": "Placar.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAqAAAA",
+              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Placar.cs",
+              "RelativeDocumentMoniker": "Entidade\\Placar.cs",
+              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Placar.cs",
+              "RelativeToolTip": "Entidade\\Placar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T21:48:32.689Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Regras.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Regras.cs",
-              "RelativeDocumentMoniker": "Regras.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Regras.cs",
-              "RelativeToolTip": "Regras.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:06:34.819Z",
               "EditorCaption": ""
             },
             {
@@ -87,41 +62,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Game.cs",
-              "RelativeDocumentMoniker": "Game.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Game.cs",
-              "RelativeToolTip": "Game.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "DocumentIndex": 1,
+              "Title": "Controlador.cs",
+              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Controlador\\Controlador.cs",
+              "RelativeDocumentMoniker": "Controlador\\Controlador.cs",
+              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Controlador\\Controlador.cs",
+              "RelativeToolTip": "Controlador\\Controlador.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBsAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:02:04.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T22:01:44.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Configuracoes.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Configuracoes.cs",
-              "RelativeDocumentMoniker": "Configuracoes.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Configuracoes.cs",
-              "RelativeToolTip": "Configuracoes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T21:51:00.758Z",
+              "WhenOpened": "2024-05-15T01:30:52.316Z",
               "EditorCaption": ""
             }
           ]

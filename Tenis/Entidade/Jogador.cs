@@ -1,4 +1,6 @@
-﻿namespace Tenis
+﻿using Tenis.Entidade;
+
+namespace Tenis
 {
     public record Jogador(string Nome)
     {

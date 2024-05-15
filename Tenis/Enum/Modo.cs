@@ -1,4 +1,4 @@
-﻿namespace Tenis
+﻿namespace Tenis.Enum
 {
     public enum Modo
     {

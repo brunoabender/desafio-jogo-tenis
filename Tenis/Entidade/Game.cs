@@ -1,4 +1,4 @@
-﻿namespace Tenis
+﻿namespace Tenis.Entidade
 {
     public class Game
     {

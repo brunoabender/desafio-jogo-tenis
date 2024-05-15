@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tenis")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1776ba92e620c8b7c2532f532e29130bf3292530")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8cc881be5b7ff155507d399ad37981d9ffd0cbf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tenis")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tenis")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

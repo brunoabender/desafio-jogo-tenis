@@ -1,4 +1,7 @@
-﻿namespace Tenis
+﻿using Tenis.Configuracao;
+using Tenis.Enum;
+
+namespace Tenis.Entidade
 {
     public class Partida(Jogador primeiroJogador, Jogador segundoJogador)
     {
@@ -11,7 +14,7 @@
         {
             jogador.Pontuacao.Adicionar();
 
-            Modo = VerificarModo();
+            Modo = VerificarModoJogo();
 
             if (jogador.Pontuacao.Pontos == Configuracoes.UltimoPontoGame)
                 PontuarGame(jogador);
@@ -69,19 +72,17 @@
             PrimeiroJogador = new Jogador("Primeiro Jogador");
             SegundoJogador = new Jogador("Segundo Jogador");
         }
-        private void SelecionarProximoSaque() => ProximoSaque = (ProximoSaque == PrimeiroJogador) ? SegundoJogador : PrimeiroJogador;
+        private void SelecionarProximoSaque() => ProximoSaque = ProximoSaque == PrimeiroJogador ? SegundoJogador : PrimeiroJogador;
 
-        private Modo VerificarModo()
+        private Modo VerificarModoJogo()
         {
-            if (!Regras.EstaEmDeuce(PrimeiroJogador, segundoJogador) || Regras.EstaEmTimeBreak(PrimeiroJogador, SegundoJogador))
-            {
-                if (Regras.EstaEmTimeBreak(PrimeiroJogador, SegundoJogador) && !Regras.EstaEmDeuce(PrimeiroJogador, segundoJogador))
-                    return Modo.TieBreak;
-                else
-                    return Modo.Normal;
-            }
-            else
+            if (!Regras.EstaEmDeuce(PrimeiroJogador, segundoJogador) && Regras.EstaEmTimeBreak(PrimeiroJogador, SegundoJogador))
+                return Modo.TieBreak;
+            
+            if(Regras.EstaEmDeuce(PrimeiroJogador, segundoJogador) && !Regras.EstaEmTimeBreak(PrimeiroJogador, SegundoJogador))
                 return Modo.Deuce;
+            
+            return Modo.Normal;
         }
     }
 }
