@@ -40,7 +40,7 @@ namespace Tenis.Entidade
             if (jogador.Pontuacao.Pontos == Configuracoes.UltimoPontoGame && Modo == Modo.Normal) 
                 PontuarGame(jogador);
 
-            Modo = VerificarModoJogo();
+            Modo = ObterModoJogo();
         }
 
         private void PontuarGame(Jogador jogador)
@@ -97,7 +97,7 @@ namespace Tenis.Entidade
         }
         private void SelecionarProximoSaque() => ProximoSaque = ProximoSaque == PrimeiroJogador ? SegundoJogador : PrimeiroJogador;
 
-        private Modo VerificarModoJogo()
+        private Modo ObterModoJogo()
         {
             if (Regras.AtivarDeuce(PrimeiroJogador, SegundoJogador) && Modo != Modo.TieBreak)
                 return Modo.Deuce;
