@@ -16,7 +16,30 @@ namespace Tenis.Entidade
 
             Modo = VerificarModoJogo();
 
-            if (jogador.Pontuacao.Pontos == Configuracoes.UltimoPontoGame)
+            if(Modo == Modo.TieBreak)
+            {
+                if(PrimeiroJogador.Pontuacao.Pontos >= Configuracoes.GameTiebreak || SegundoJogador.Pontuacao.Pontos >= Configuracoes.GameTiebreak)
+                {
+                    if (Math.Abs(PrimeiroJogador.Pontuacao.Pontos - SegundoJogador.Pontuacao.Pontos) >= Configuracoes.MelhorDe)
+                    {
+                        PontuarGame(jogador);
+                        Modo = Modo.Normal;
+                    }
+                }
+                
+                return;
+            }   
+
+            if(Modo == Modo.Deuce)
+            {
+                if (Math.Abs(PrimeiroJogador.Pontuacao.Pontos - SegundoJogador.Pontuacao.Pontos) >= Configuracoes.MelhorDe)
+                {
+                    PontuarGame(jogador);
+                    Modo = Modo.Normal;
+                }
+            }
+
+            if (jogador.Pontuacao.Pontos == Configuracoes.UltimoPontoGame && Modo == Modo.Normal) 
                 PontuarGame(jogador);
         }
 
@@ -76,11 +99,11 @@ namespace Tenis.Entidade
 
         private Modo VerificarModoJogo()
         {
-            if (!Regras.EstaEmDeuce(PrimeiroJogador, segundoJogador) && Regras.EstaEmTimeBreak(PrimeiroJogador, SegundoJogador))
-                return Modo.TieBreak;
-            
-            if(Regras.EstaEmDeuce(PrimeiroJogador, segundoJogador) && !Regras.EstaEmTimeBreak(PrimeiroJogador, SegundoJogador))
+            if (Regras.EstaEmDeuce(PrimeiroJogador, segundoJogador) && Modo != Modo.TieBreak)
                 return Modo.Deuce;
+            
+            if(Regras.EstaEmTieBreak(PrimeiroJogador, segundoJogador) && Modo != Modo.Deuce)
+                return Modo.TieBreak;
             
             return Modo.Normal;
         }
