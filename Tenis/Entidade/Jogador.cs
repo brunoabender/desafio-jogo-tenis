@@ -10,9 +10,8 @@ namespace Tenis
             Game = game;
             Set = set;
         }
-
-        public Pontuacao Pontuacao { get; set; } = new Pontuacao();
-        public Game Game { get; set; } = new Game();
-        public Set Set { get; set; } = new Set();
+        public Pontuacao Pontuacao { get; set; } = new Pontuacao(0);
+        public Game Game { get; set; } = new Game(0);
+        public Set Set { get; set; } = new Set(0);
     }
 }

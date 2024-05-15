@@ -4,11 +4,19 @@ using Tenis.Enum;
 
 namespace Tenis.Entidade
 {
-    public class Partida(Jogador primeiroJogador, Jogador segundoJogador)
+    public class Partida
     {
-        public Jogador PrimeiroJogador { get; private set; } = primeiroJogador;
-        public Jogador SegundoJogador { get; private set; } = segundoJogador;
-        public Jogador ProximoSaque { get; private set; } = new Random().Next(0, 2) == 0 ? primeiroJogador : segundoJogador;
+        public Partida(Jogador primeiroJogador, Jogador segundoJogador)
+        {
+            PrimeiroJogador = primeiroJogador;
+            SegundoJogador = segundoJogador;
+            Modo = ObterModoJogo();
+            ProximoSaque = primeiroJogador;
+        }
+
+        public Jogador PrimeiroJogador { get; private set; }
+        public Jogador SegundoJogador { get; private set; }
+        public Jogador ProximoSaque { get; private set; }
         public Modo Modo { get; set; } = Modo.Normal;
 
         public void Pontuar(Jogador jogador)
@@ -96,13 +104,13 @@ namespace Tenis.Entidade
 
         private Modo ObterModoJogo()
         {
-            if (Regras.AtivarDeuce(PrimeiroJogador, SegundoJogador, Modo.TieBreak))
+            if (Regras.AtivarDeuce(PrimeiroJogador, SegundoJogador))
             {
                 LimparPontuacao();
                 return Modo.Deuce;
             }
             
-            if(Regras.AtivarTieBreak(PrimeiroJogador, SegundoJogador, Modo.Deuce))
+            if(Regras.AtivarTieBreak(PrimeiroJogador, SegundoJogador))
             {
                 LimparPontuacao();
                 return Modo.TieBreak;
