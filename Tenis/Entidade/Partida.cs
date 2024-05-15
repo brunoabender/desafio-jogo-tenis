@@ -1,4 +1,5 @@
-﻿using Tenis.Configuracao;
+﻿using Tenis.Comum;
+using Tenis.Configuracao;
 using Tenis.Enum;
 
 namespace Tenis.Entidade
@@ -14,49 +15,44 @@ namespace Tenis.Entidade
         {
             jogador.Pontuacao.Adicionar();
 
-            if(Modo == Modo.TieBreak)
+            if(Modo == Modo.TieBreak && PrimeiroJogador.Pontuacao.Pontos >= Configuracoes.GameTiebreak || SegundoJogador.Pontuacao.Pontos >= Configuracoes.GameTiebreak)
             {
-                if(PrimeiroJogador.Pontuacao.Pontos >= Configuracoes.GameTiebreak || SegundoJogador.Pontuacao.Pontos >= Configuracoes.GameTiebreak)
+                if (CalculoDiferenca.PermitirPontuar(PrimeiroJogador.Pontuacao.Pontos, SegundoJogador.Pontuacao.Pontos))
                 {
-                    if (Math.Abs(PrimeiroJogador.Pontuacao.Pontos - SegundoJogador.Pontuacao.Pontos) >= Configuracoes.MelhorDe)
-                    {
-                        PontuarGame(jogador);
-                        Modo = Modo.Normal;
-                    }
+                    PontuarSet(jogador);
+                    Modo = Modo.Normal;
                 }
                 
                 return;
             }   
 
-            if(Modo == Modo.Deuce)
+            if(Modo == Modo.Deuce && CalculoDiferenca.PermitirPontuar(PrimeiroJogador.Pontuacao.Pontos, SegundoJogador.Pontuacao.Pontos))
             {
-                if (Math.Abs(PrimeiroJogador.Pontuacao.Pontos - SegundoJogador.Pontuacao.Pontos) >= Configuracoes.MelhorDe)
-                {
-                    PontuarGame(jogador);
-                    Modo = Modo.Normal;
-                }
+                PontuarGame(jogador);
+                Modo = Modo.Normal;   
             }
 
             if (jogador.Pontuacao.Pontos == Configuracoes.UltimoPontoGame && Modo == Modo.Normal) 
                 PontuarGame(jogador);
 
-            Modo = ObterModoJogo();
+            if(Modo == Modo.Normal)
+                Modo = ObterModoJogo();
         }
 
         private void PontuarGame(Jogador jogador)
         {
             jogador.Game.Adicionar();
 
-            if (PrimeiroJogador.Game.Games == Configuracoes.UltimoGameDoSet - 1 && SegundoJogador.Game.Games == Configuracoes.UltimoGameDoSet - 1)
+            if (PrimeiroJogador.Game.Games == Configuracoes.UltimoGameDoSet && SegundoJogador.Game.Games == Configuracoes.UltimoGameDoSet)
             {
-                if (Math.Abs(PrimeiroJogador.Game.Games - SegundoJogador.Game.Games) == 2)
+                if (CalculoDiferenca.PermitirPontuar(PrimeiroJogador.Game.Games, SegundoJogador.Game.Games))
                     PontuarSet(jogador);
 
                 LimparPontuacao();
                 return;
             }
 
-            if (jogador.Game.Games == Configuracoes.UltimoGameDoSet)
+            if (jogador.Game.Games == Configuracoes.UltimoGameDoSet && CalculoDiferenca.PermitirPontuar(PrimeiroJogador.Game.Games, SegundoJogador.Game.Games))
                 PontuarSet(jogador);
 
             LimparPontuacao();
@@ -66,6 +62,7 @@ namespace Tenis.Entidade
         private void PontuarSet(Jogador jogador)
         {
             jogador.Set.Adicionar();
+
             if (jogador.Set.Sets == Configuracoes.UltimoSet)
             {
                 Console.WriteLine($"{jogador.Nome} venceu a partida!");
@@ -99,11 +96,17 @@ namespace Tenis.Entidade
 
         private Modo ObterModoJogo()
         {
-            if (Regras.AtivarDeuce(PrimeiroJogador, SegundoJogador) && Modo != Modo.TieBreak)
+            if (Regras.AtivarDeuce(PrimeiroJogador, SegundoJogador, Modo.TieBreak))
+            {
+                LimparPontuacao();
                 return Modo.Deuce;
+            }
             
-            if(Regras.AtivarTieBreak(PrimeiroJogador, SegundoJogador) && Modo != Modo.Deuce)
+            if(Regras.AtivarTieBreak(PrimeiroJogador, SegundoJogador, Modo.Deuce))
+            {
+                LimparPontuacao();
                 return Modo.TieBreak;
+            }
             
             return Modo.Normal;
         }
