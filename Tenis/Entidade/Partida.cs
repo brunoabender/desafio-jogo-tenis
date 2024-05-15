@@ -14,8 +14,6 @@ namespace Tenis.Entidade
         {
             jogador.Pontuacao.Adicionar();
 
-            Modo = VerificarModoJogo();
-
             if(Modo == Modo.TieBreak)
             {
                 if(PrimeiroJogador.Pontuacao.Pontos >= Configuracoes.GameTiebreak || SegundoJogador.Pontuacao.Pontos >= Configuracoes.GameTiebreak)
@@ -41,6 +39,8 @@ namespace Tenis.Entidade
 
             if (jogador.Pontuacao.Pontos == Configuracoes.UltimoPontoGame && Modo == Modo.Normal) 
                 PontuarGame(jogador);
+
+            Modo = VerificarModoJogo();
         }
 
         private void PontuarGame(Jogador jogador)
@@ -99,10 +99,10 @@ namespace Tenis.Entidade
 
         private Modo VerificarModoJogo()
         {
-            if (Regras.EstaEmDeuce(PrimeiroJogador, segundoJogador) && Modo != Modo.TieBreak)
+            if (Regras.AtivarDeuce(PrimeiroJogador, SegundoJogador) && Modo != Modo.TieBreak)
                 return Modo.Deuce;
             
-            if(Regras.EstaEmTieBreak(PrimeiroJogador, segundoJogador) && Modo != Modo.Deuce)
+            if(Regras.AtivarTieBreak(PrimeiroJogador, SegundoJogador) && Modo != Modo.Deuce)
                 return Modo.TieBreak;
             
             return Modo.Normal;

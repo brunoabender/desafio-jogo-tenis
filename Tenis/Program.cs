@@ -2,11 +2,12 @@
 using Tenis.Controlador;
 using Tenis.Entidade;
 using Tenis.Enum;
+using Tenis.Factory;
 
 var primeiroJogador = new Jogador("Primeiro Jogador");
 var segundoJogador = new Jogador("Segundo Jogador");
 var partida = new Partida(primeiroJogador, segundoJogador);
-var placar = new Placar(partida);
+var placar = new PlacarFactory(partida);
 var controlador = new Controlador(partida);
 
 while (true)
