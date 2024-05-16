@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tenis", "Tenis.csproj", "{AE699A60-3C8D-4774-9E24-FD2D463C0844}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenis.Teste.Unidade", "..\Tenis.Teste.Unidade\Tenis.Teste.Unidade.csproj", "{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tenis.Teste.Unidade", "..\Tenis.Teste.Unidade\Tenis.Teste.Unidade.csproj", "{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenis.Teste.Aceitacao", "..\Tenis.Teste.Aceitacao\Tenis.Teste.Aceitacao.csproj", "{EA326392-6ECD-40B0-B428-E43717D8370C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA326392-6ECD-40B0-B428-E43717D8370C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA326392-6ECD-40B0-B428-E43717D8370C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA326392-6ECD-40B0-B428-E43717D8370C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA326392-6ECD-40B0-B428-E43717D8370C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

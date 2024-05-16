@@ -1,6 +1,6 @@
 ﻿namespace Tenis.Enum
 {
-    internal enum Acao : int
+    public enum Acao : int
     {
         PontuarPrimeiroJogador = 1,
         PontuarSegundoJogador = 2,

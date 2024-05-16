@@ -6,7 +6,7 @@ using Xunit;
 namespace Tenis.Teste.Unidade.Placar
 {
     [Collection("RecursoCompartilhado")]
-    public class PlacarNormalTests
+    public class PlacarNormalTestes
     {
         [Fact]
         public void DeveImprimirPlacarNormalCorretamente()

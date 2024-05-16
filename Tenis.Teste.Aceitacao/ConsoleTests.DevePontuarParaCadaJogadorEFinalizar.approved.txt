@@ -1,0 +1,24 @@
+﻿Placar de Tênis:
+Jogador 1: 0 sets, 0 games, 0 pontos no game atual
+Jogador 2: 0 sets, 0 games, 0 pontos no game atual
+Próximo saque: Primeiro Jogador
+Modo: Normal
+Opções:
+Pontuar Jogador 1: 1
+Pontuar Jogador 2: 2
+Placar de Tênis:
+Jogador 1: 0 sets, 0 games, 15 pontos no game atual
+Jogador 2: 0 sets, 0 games, 0 pontos no game atual
+Próximo saque: Primeiro Jogador
+Modo: Normal
+Opções:
+Pontuar Jogador 1: 1
+Pontuar Jogador 2: 2
+Placar de Tênis:
+Jogador 1: 0 sets, 0 games, 15 pontos no game atual
+Jogador 2: 0 sets, 0 games, 15 pontos no game atual
+Próximo saque: Primeiro Jogador
+Modo: Normal
+Opções:
+Pontuar Jogador 1: 1
+Pontuar Jogador 2: 2

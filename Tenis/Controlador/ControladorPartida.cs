@@ -3,7 +3,7 @@ using Tenis.Enum;
 
 namespace Tenis.Controlador
 {
-    internal class Controlador(Partida partida)
+    public class ControladorPartida(Partida partida)
     {
         private readonly Partida partida = partida;
 

@@ -9,5 +9,6 @@
         public const int PontoDeuce = 3;
         public const int MelhorDe = 2;
         public const int GameTiebreak = 7;
+        public const string? Saida = "saida";
     }
 }
