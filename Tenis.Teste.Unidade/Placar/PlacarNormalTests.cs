@@ -28,7 +28,6 @@ namespace Tenis.Teste.Unidade.Placar
 
             // Arrange
             var partida = new Partida(primeiroJogador, segundoJogador);
-            ;
             var placarDeuce = new PlacarNormal();
 
             using var stringWritter = new StringWriter();
