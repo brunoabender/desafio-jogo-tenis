@@ -15,7 +15,7 @@ while (true)
     placar.Imprimir();
     var comando = Console.ReadLine();
 
-    if(int.TryParse(comando, out var escolha))
+    if (int.TryParse(comando, out var escolha))
     {
         Acao acao = (Acao)escolha;
         controlador.Executar(acao);

@@ -3,48 +3,24 @@
   "WorkspaceRootPath": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}|..\\Tenis.Teste.Unidade\\Tenis.Teste.Unidade.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis.teste.unidade\\placar\\placartiebreaktests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}|..\\Tenis.Teste.Unidade\\Tenis.Teste.Unidade.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis.teste.unidade\\placar\\placardeucetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}|..\\Tenis.Teste.Unidade\\Tenis.Teste.Unidade.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis.teste.unidade\\placar\\placarnormaltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\placar\\placarnormal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:placar\\placarnormal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\placar\\placartiebreak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:placar\\placartiebreak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}|..\\Tenis.Teste.Unidade\\Tenis.Teste.Unidade.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis.teste.unidade\\partida\\partidatestes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\entidade\\partida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:entidade\\partida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\placar\\placardeuce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:placar\\placardeuce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\entidade\\set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:entidade\\set.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}|..\\Tenis.Teste.Unidade\\Tenis.Teste.Unidade.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis.teste.unidade\\placar\\placarnormaltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\entidade\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:entidade\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}|..\\Tenis.Teste.Unidade\\Tenis.Teste.Unidade.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis.teste.unidade\\placar\\placartiebreaktests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bruno_hmvft36\\.nuget\\packages\\xunit.runners\\2.0.0\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\entidade\\jogador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:entidade\\jogador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis\\entidade\\pontuacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE699A60-3C8D-4774-9E24-FD2D463C0844}|Tenis.csproj|solutionrelative:entidade\\pontuacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9BCB611-758C-4FC6-8357-B00A74F9F6BA}|..\\Tenis.Teste.Unidade\\Tenis.Teste.Unidade.csproj|c:\\tenis\\desafio-jogo-tenis\\tenis.teste.unidade\\placar\\placardeucetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,33 +30,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Partida.cs",
               "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Partida.cs",
               "RelativeDocumentMoniker": "Entidade\\Partida.cs",
               "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Partida.cs",
               "RelativeToolTip": "Entidade\\Partida.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAmwA0AAAArAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAMwC8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-13T22:25:02.441Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlacarTieBreakTests.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Placar\\PlacarTieBreakTests.cs",
-              "RelativeDocumentMoniker": "..\\Tenis.Teste.Unidade\\Placar\\PlacarTieBreakTests.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Placar\\PlacarTieBreakTests.cs",
-              "RelativeToolTip": "..\\Tenis.Teste.Unidade\\Placar\\PlacarTieBreakTests.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACEAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T20:33:10.77Z",
               "EditorCaption": ""
             },
             {
@@ -93,132 +56,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlacarTieBreak.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Placar\\PlacarTieBreak.cs",
-              "RelativeDocumentMoniker": "Placar\\PlacarTieBreak.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Placar\\PlacarTieBreak.cs",
-              "RelativeToolTip": "Placar\\PlacarTieBreak.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T20:23:05.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlacarNormalTests.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Placar\\PlacarNormalTests.cs",
-              "RelativeDocumentMoniker": "..\\Tenis.Teste.Unidade\\Placar\\PlacarNormalTests.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Placar\\PlacarNormalTests.cs",
-              "RelativeToolTip": "..\\Tenis.Teste.Unidade\\Placar\\PlacarNormalTests.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T20:20:05.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlacarNormal.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Placar\\PlacarNormal.cs",
-              "RelativeDocumentMoniker": "Placar\\PlacarNormal.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Placar\\PlacarNormal.cs",
-              "RelativeToolTip": "Placar\\PlacarNormal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T20:19:50.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PlacarDeuce.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Placar\\PlacarDeuce.cs",
-              "RelativeDocumentMoniker": "Placar\\PlacarDeuce.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Placar\\PlacarDeuce.cs",
-              "RelativeToolTip": "Placar\\PlacarDeuce.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T20:13:03.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "readme.txt",
-              "DocumentMoniker": "C:\\Users\\bruno_hmvft36\\.nuget\\packages\\xunit.runners\\2.0.0\\readme.txt",
-              "RelativeDocumentMoniker": "..\\..\\..\\Users\\bruno_hmvft36\\.nuget\\packages\\xunit.runners\\2.0.0\\readme.txt",
-              "ToolTip": "C:\\Users\\bruno_hmvft36\\.nuget\\packages\\xunit.runners\\2.0.0\\readme.txt",
-              "RelativeToolTip": "..\\..\\..\\Users\\bruno_hmvft36\\.nuget\\packages\\xunit.runners\\2.0.0\\readme.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-05-15T20:10:34.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Jogador.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Jogador.cs",
-              "RelativeDocumentMoniker": "Entidade\\Jogador.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Jogador.cs",
-              "RelativeToolTip": "Entidade\\Jogador.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T20:09:30.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Pontuacao.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Pontuacao.cs",
-              "RelativeDocumentMoniker": "Entidade\\Pontuacao.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Pontuacao.cs",
-              "RelativeToolTip": "Entidade\\Pontuacao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T20:07:43.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Game.cs",
-              "RelativeDocumentMoniker": "Entidade\\Game.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Game.cs",
-              "RelativeToolTip": "Entidade\\Game.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T20:07:21.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Set.cs",
-              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Set.cs",
-              "RelativeDocumentMoniker": "Entidade\\Set.cs",
-              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Entidade\\Set.cs",
-              "RelativeToolTip": "Entidade\\Set.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T20:06:28.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "PlacarDeuceTests.cs",
               "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Placar\\PlacarDeuceTests.cs",
               "RelativeDocumentMoniker": "..\\Tenis.Teste.Unidade\\Placar\\PlacarDeuceTests.cs",
               "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Placar\\PlacarDeuceTests.cs",
               "RelativeToolTip": "..\\Tenis.Teste.Unidade\\Placar\\PlacarDeuceTests.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwC8AAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T18:56:43.402Z",
+              "WhenOpened": "2024-05-16T21:17:05.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PartidaTestes.cs",
+              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Partida\\PartidaTestes.cs",
+              "RelativeDocumentMoniker": "..\\Tenis.Teste.Unidade\\Partida\\PartidaTestes.cs",
+              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Partida\\PartidaTestes.cs",
+              "RelativeToolTip": "..\\Tenis.Teste.Unidade\\Partida\\PartidaTestes.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAASwD8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T21:09:54.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T20:58:31.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlacarTieBreakTests.cs",
+              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Placar\\PlacarTieBreakTests.cs",
+              "RelativeDocumentMoniker": "..\\Tenis.Teste.Unidade\\Placar\\PlacarTieBreakTests.cs",
+              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Placar\\PlacarTieBreakTests.cs",
+              "RelativeToolTip": "..\\Tenis.Teste.Unidade\\Placar\\PlacarTieBreakTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T20:33:10.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlacarNormalTests.cs",
+              "DocumentMoniker": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Placar\\PlacarNormalTests.cs",
+              "RelativeDocumentMoniker": "..\\Tenis.Teste.Unidade\\Placar\\PlacarNormalTests.cs",
+              "ToolTip": "C:\\Tenis\\desafio-jogo-tenis\\Tenis.Teste.Unidade\\Placar\\PlacarNormalTests.cs",
+              "RelativeToolTip": "..\\Tenis.Teste.Unidade\\Placar\\PlacarNormalTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T20:20:05.346Z",
               "EditorCaption": ""
             }
           ]
